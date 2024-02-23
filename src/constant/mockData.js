@@ -241,7 +241,7 @@ const DATA = {
       id: "cert_award_1",
       icon: HariSenin,
       provider: "Harisenin Bootcamp",
-      course: "Fullstack Web Develover",
+      course: "Fullstack Web Developer",
       startDate: "Juli 2023",
       endDate: "Desember 2023",
     },
