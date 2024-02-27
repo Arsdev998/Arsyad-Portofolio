@@ -63,7 +63,7 @@ const DATA = {
       links: [
         {
           label: "View Spotify Clone",
-          url: "",
+          url: "https://spotify-clone-rakb6xfie-arsdevvs-projects.vercel.app/",
         },
       ],
     },
