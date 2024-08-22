@@ -5,12 +5,14 @@ import Education from "../../components/education/Education"
 import Experience from "../../components/experience/Experience"
 import Header from "../../components/header/Header"
 import Hobbies from "../../components/hobbies/Hobbies"
+import Intern from "../../components/intern/Intern"
 import Skill from "../../components/skill/Skill"
 
 const HomeScreen = () => {
   return (
     <div className="page-container">
         <Header />
+        <Intern/>
         <Experience />
         <Education />
         <Skill />

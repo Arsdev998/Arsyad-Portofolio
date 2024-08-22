@@ -23,16 +23,36 @@ import {
   Wacthing,
   SkillTailwind,
   HariSenin,
+  QodrBee,
+  express,
+  node,
 } from "../assets/image";
 
 const DATA = {
+  InternExperiences: [
+    {
+      id: "prof_exp_2",
+      startDate: "Mei 2024",
+      endDate: "October 2024",
+      project: "Frontend Web Developer",
+      company: {
+        logo: QodrBee,
+        name: "PT Qodr Bee Berinovasi",
+        info: "IT Consultant",
+      },
+      description:
+        "Developed a Jira-like employee management application using React.js, which allows users to track tasks, collaborate in teams, andmanage projects. Work closely with the backend team to integrate REST APIs, ensuring the data displayed on the frontend is always up-to-date and consistent.",
+      links: [
+        {
+          label: "View Website",
+          url: "https://qodrbee.com/",
+        },
+      ],
+    },
+  ],
   projectExperiences: [
     {
-      id: "prof_exp_1",
-      startDate: "Jul 2023",
-      endDate: "Des 2023",
       project: "Final Project at Harisenin Bootcamp",
-      diamondColors: ["Purple", "Yellow", "Blue"],
       company: {
         logo: ProjectLogo1,
         name: "Twitter Clone",
@@ -49,10 +69,7 @@ const DATA = {
     },
     {
       id: "prof_exp_2",
-      startDate: "9 Feb 2024",
-      endDate: "24 Feb 2024",
       project: "Personal Project",
-      diamondColors: ["Blue", "Orange", "Green"],
       company: {
         logo: ProjectLogo2,
         name: "Spotify Clone",
@@ -67,36 +84,23 @@ const DATA = {
         },
       ],
     },
-    // {
-    //   id: "prof_exp_3",
-    //   startDate: "Aug 2012",
-    //   endDate: "Nov 2013",
-    //   position: "Content Specialist",
-    //   diamondColors: ["Green", "Yellow", "Purple"],
-    //   company: {
-    //     logo: CompanyLogo3,
-    //     name: "21vek Private Ltd.",
-    //     info: "E-commerce store in Minsk, Belarus",
-    //   },
-    //   description:
-    //     "Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.",
-    //   links: [],
-    // },
-    // {
-    //   id: "prof_exp_4",
-    //   startDate: "Aug 2011",
-    //   endDate: "Nov 2014",
-    //   position: "Software Support Engineer",
-    //   diamondColors: ["Green", "Yellow", "Purple"],
-    //   company: {
-    //     logo: CompanyLogo4,
-    //     name: "Integral",
-    //     info: "Microelectronics factory in Minsk, Belarus",
-    //   },
-    //   description:
-    //     "Supported retail accounting system LS Trade, troubleshoot technical problems.",
-    //   links: [],
-    // },
+    {
+      id: "prof_exp_3",
+      position: "Content Specialist",
+      company: {
+        logo: "https://melense-fe.vercel.app/assets/logo-DCtTZ0A2.png",
+        name: "MelenseTour",
+        info: "Travel Information Destination",
+      },
+      description:
+        "The language I use for the frontend is Javascript and the library is React.js, styling uses Tailwind.Css and Shadcn as componentlibraries, state management with Redux. The languages Iuse for the backend are Javascript, Node.Js, Express.Js and use Postgree as the database, Prisma as the ORM,upload media using the Cloudinary cloud",
+      links: [
+        {
+          label: "View MelenseTour",
+          url: "https://melense-fe.vercel.app/",
+        },
+      ],
+    },
   ],
   educationalExperiences: [
     {
@@ -104,7 +108,6 @@ const DATA = {
       startDate: "Juli 2023",
       endDate: "Desember 2023",
       project: "FullStack Web Developer",
-      diamondColors: ["Blue", "Orange", "Green"],
       company: {
         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlh4YIVtSZJfIXTYanuw-fnEePCCAonCIYbFlpCcjfUQ&s",
         name: "Harisenin Bootcamp",
@@ -122,69 +125,22 @@ const DATA = {
     {
       id: "prof_exp_2",
       startDate: "Desember 2023",
-      endDate: "Juni 2024",
-      project: "Advance Training",
-      diamondColors: ["Blue", "Orange", "Green"],
+      endDate: "Desember 2024",
+      project: "Advance Training Web Development",
       company: {
-        logo: "https://qodr.id/favicon.png",
+        logo: "https://www.qodr.id/qodr_logo-only_outline.svg",
         name: "Qodr",
-        info: "Offline Training",
+        info: "Islamic IT Training Board",
       },
       description:
         "Qodr is a Islamic IT training boarding school, Qodr is an offline course specifically for training web development and UI/UX skills",
       links: [
         {
           label: "Qodr",
-          url: "https://qodr.id/",
+          url: "https://www.qodr.id/",
         },
       ],
     },
-    // {
-    //   id: "edu_2",
-    //   icon: DiamondLgGreen,
-    //   course: "Fundamentals of UX/UI",
-    //   institution: "Skillshare",
-    //   degree: "Beginner Course",
-    //   startDate: "2021",
-    //   endDate: "2022",
-    // },
-    // {
-    //   id: "edu_3",
-    //   icon: DiamondLgOrange,
-    //   course: "CG Artist",
-    //   institution: "Polygon CG School",
-    //   degree: "Graduate",
-    //   startDate: "2018",
-    //   endDate: "2021",
-    // },
-    // {
-    //   id: "edu_4",
-    //   icon: DiamondLgPink,
-    //   course: "Graphic Design",
-    //   institution: "Belarusian State Academy of Arts",
-    //   degree: "Postgraduate Diploma",
-    //   startDate: "2015",
-    //   endDate: "2018",
-    // },
-    // {
-    //   id: "edu_5",
-    //   icon: DiamondLgYellow,
-    //   course: "SEO Specialist Workshop",
-    //   institution: "ARTOX Media",
-    //   degree: "",
-    //   startDate: "2015",
-    //   endDate: "2017",
-    // },
-    // {
-    //   id: "edu_6",
-    //   icon: DiamondLgBlue,
-    //   course: "Information Technology Software",
-    //   institution:
-    //     "Belarusian State University of Informatics and Radioelectronics",
-    //   degree: "Bachelor Degree",
-    //   startDate: "2011",
-    //   endDate: "2015 ",
-    // },
   ],
   skills: [
     {
@@ -231,6 +187,18 @@ const DATA = {
     },
     {
       id: "skill_8",
+      icon: node,
+      name: "NODE JS",
+      description: "Javascript Runtime Environment",
+    },
+    {
+      id: "skill_9",
+      icon: express,
+      name: "EXPRESS JS",
+      description: "Node Js Framework",
+    },
+    {
+      id: "skill_10",
       icon: SkillGithub,
       name: "GITHUB",
       description: "Working Team With Version Control System",

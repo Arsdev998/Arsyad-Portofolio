@@ -28,6 +28,8 @@ import SkillTailwind from "./images/tailwind-css.svg";
 import SkillJavascript from "./images/js.svg";
 import SkillGithub from "./images/gh.svg";
 import SkillRedux from "./images/redux.svg";
+import express from './images/express.png';
+import node from './images/nodejs.png';
 import Udemy from "./images/udemy.png";
 import Coursera from "./images/coursera.png";
 import Google from "./images/google.png";
@@ -36,6 +38,7 @@ import Travelling from "./images/travelling.png";
 import Wacthing from "./images/tv.png";
 import Gaming from "./images/gaming.png";
 import HariSenin from "./images/harisenin.jpg";
+import QodrBee from './images/qodrbee.png';
 
 export {
   AvatarPNG,
@@ -76,4 +79,7 @@ export {
   Wacthing,
   Gaming,
   HariSenin,
+  QodrBee,
+  express,
+  node
 };

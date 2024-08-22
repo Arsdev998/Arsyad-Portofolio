@@ -10,14 +10,14 @@ import {
   DiamondLgYellow,
 } from "../../assets/image";
 
-const Experience = () => {
+const Intern = () => {
   return (
     <div className="experience-sc resume-block">
       <div className="container">
         <div className="experience-content dotted-border-left">
-          <Title titleText={"Project Experience"} />
+          <Title titleText={"Intern Experience"} />
           <div className="experience-list grid">
-            {DATA.projectExperiences.map((item) => (
+            {DATA.InternExperiences.map((item) => (
               <ExperienceItem key={item.id} item={item} />
             ))}
           </div>
@@ -27,7 +27,7 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Intern;
 
 const ExperienceItem = ({ item }) => {
   const showDiamondImage = (color) => {
@@ -48,7 +48,7 @@ const ExperienceItem = ({ item }) => {
     <div className="experience-item" key={item.id}>
       <div className="exp-time flex items-center">
         <span className="start-time">{item.startDate}</span>
-        <span></span>
+        <span> - </span>
         <div className="end-time">{item.endDate || ""}</div>
       </div>
       <div className="exp-position flex items-center flex-wrap">
@@ -69,7 +69,12 @@ const ExperienceItem = ({ item }) => {
       <p className="exp-description text">{item.description}</p>
       <div className="exp-links">
         {item.links?.map((link) => (
-          <a key={link.label} href={link.url} target="_blank" className="text-mauve">
+          <a
+            key={link.label}
+            href={link.url}
+            target="_blank"
+            className="text-mauve"
+          >
             <FaLink />
             <span>{link.label}</span>
           </a>
